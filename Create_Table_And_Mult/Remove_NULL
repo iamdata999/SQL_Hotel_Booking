@@ -1,0 +1,7 @@
+UPDATE Hotel_booking_system
+SET agent = 0
+WHERE agent IS NULL;
+
+UPDATE Hotel_booking_system
+SET company = 'Company ABC'
+WHERE company IS NULL;
