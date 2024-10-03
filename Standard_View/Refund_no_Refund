@@ -1,0 +1,11 @@
+SELECT 
+    hotel, 
+    deposit_type, 
+    COUNT(*) AS number_of_bookings
+FROM 
+    Hotel_booking_system
+GROUP BY 
+    hotel, deposit_type
+ORDER BY 
+    deposit_type ASC, hotel ASC;
+

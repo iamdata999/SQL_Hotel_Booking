@@ -1,0 +1,8 @@
+SELECT 
+    hotel, 
+    price
+FROM 
+    Hotel_booking_system
+ORDER BY 
+    hotel, 
+    price;

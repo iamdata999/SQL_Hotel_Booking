@@ -1,0 +1,9 @@
+SELECT 
+    hotel,
+    customer_type,
+    (stays_in_week_nights) AS total_nights_stayed
+FROM 
+    Hotel_booking_system
+ORDER BY 
+    hotel,
+    customer_type;

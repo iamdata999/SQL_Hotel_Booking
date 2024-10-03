@@ -1,0 +1,9 @@
+SELECT 
+    hotel, 
+    COUNT(*) AS canceled_bookings
+FROM 
+    Hotel_booking_system
+WHERE 
+    is_canceled = 1
+GROUP BY 
+    hotel;
