@@ -1,0 +1,9 @@
+SELECT 
+    hotel,
+    stays_in_week_nights,
+    price,
+    (stays_in_week_nights * price) AS total_cost
+FROM 
+    Hotel_booking_system
+ORDER BY 
+    total_cost DESC;

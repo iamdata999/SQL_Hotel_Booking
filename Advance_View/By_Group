@@ -1,0 +1,24 @@
+SELECT 
+    hotel, 
+    adults, 
+    children,
+    CASE 
+        WHEN adults > 1 AND children >= 1 THEN 'Yes' 
+        ELSE 'No' 
+    END AS Family,
+    CASE 
+        WHEN adults = 2 AND children = 0 THEN 'Yes' 
+        ELSE 'No' 
+    END AS Couple,
+    CASE 
+        WHEN adults = 1 AND children = 0 THEN 'Yes' 
+        ELSE 'No' 
+    END AS Single
+FROM 
+    Hotel_booking_system
+ORDER BY 
+    Family DESC, -- Families first
+    Couple DESC, -- Then Couples
+    Single DESC, -- Then Singles
+    hotel ASC;   -- Finally, sort by hotel name
+

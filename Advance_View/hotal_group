@@ -1,0 +1,12 @@
+SELECT 
+    hotel,
+    SUM(CASE WHEN adults > 1 AND children > 0 THEN 1 ELSE 0 END) AS total_family,
+    SUM(CASE WHEN adults = 2 AND children = 0 THEN 1 ELSE 0 END) AS total_couple,
+    SUM(CASE WHEN adults = 1 AND children = 0 THEN 1 ELSE 0 END) AS total_single
+FROM 
+    Hotel_booking_system
+GROUP BY 
+    hotel
+ORDER BY 
+    total_family DESC, total_couple DESC, total_single DESC;
+

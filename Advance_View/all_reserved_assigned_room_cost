@@ -1,0 +1,5 @@
+SELECT reserved_room_type, assigned_room_type, 
+       SUM(stays_in_week_nights * price) AS total_cost
+FROM Hotel_booking_system
+GROUP BY reserved_room_type, assigned_room_type
+ORDER BY total_cost DESC;
